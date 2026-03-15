@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ Quantum Calculator ✨</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+        <div class="circle circle-4"></div>
+    </div>
+
+    <div class="container">
+        <!-- Main Calculator -->
+        <div class="calculator">
+            <div class="calculator-header">
+                <div class="logo">
+                    <i class="fas fa-atom"></i>
+                    <span>QUANTUM CALC</span>
+                </div>
+                <div class="status-dot"></div>
+            </div>
+
+            <!-- Display Section -->
+            <div class="display-section">
+                <div class="display-screen">
+                    <div class="expression" id="expression"></div>
+                    <div class="result" id="result">0</div>
+                </div>
+                <div class="display-glow"></div>
+            </div>
+
+            <!-- Input Section -->
+            <div class="input-section">
+                <div class="input-group">
+                    <label><i class="fas fa-number"></i>Number A</label>
+                    <input type="number" id="numA" placeholder="Enter first number">
+                </div>
+                <div class="input-group">
+                    <label><i class="fas fa-number"></i>Number B</label>
+                    <input type="number" id="numB" placeholder="Enter second number">
+                </div>
+            </div>
+
+            <!-- Operations -->
+            <div class="operations">
+                <button class="btn-operation" data-op="add">
+                    <span class="icon">+</span>
+                    <span class="text">Add</span>
+                </button>
+                <button class="btn-operation" data-op="subtract">
+                    <span class="icon">−</span>
+                    <span class="text">Subtract</span>
+                </button>
+                <button class="btn-operation" data-op="multiply">
+                    <span class="icon">×</span>
+                    <span class="text">Multiply</span>
+                </button>
+                <button class="btn-operation" data-op="divide">
+                    <span class="icon">÷</span>
+                    <span class="text">Divide</span>
+                </button>
+                <button class="btn-operation btn-random" data-op="random">
+                    <span class="icon"><i class="fas fa-dice"></i></span>
+                    <span class="text">Random</span>
+                </button>
+            </div>
+
+            <!-- Clear Button -->
+            <button class="btn-clear" id="clearBtn">
+                <i class="fas fa-redo"></i> Clear All
+            </button>
+        </div>
+
+        <!-- History Panel -->
+        <div class="history-panel">
+            <div class="history-header">
+                <h2><i class="fas fa-history"></i> History</h2>
+                <button class="clear-history" id="clearHistory">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </div>
+            <div class="history-list" id="historyList">
+                <div class="history-empty">
+                    <i class="fas fa-calculator"></i>
+                    <p>No calculations yet</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loader">
+            <div class="loader-ring"></div>
+            <span>Calculating...</span>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
