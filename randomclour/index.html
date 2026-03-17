@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Random Color Generator</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <h1>Random Color Generator</h1>
-    <div class="container"></div>
-    <script src="script.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Random Color Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="hero">
+      <div>
+        <p class="pill">Color Playground</p>
+        <h1>Random Color Generator</h1>
+        <p class="lead">Generate and explore beautiful palette swatches instantly. Click a card to copy the color hex code.</p>
+      </div>
+    </header>
+
+    <section class="controls">
+      <div class="control">
+        <label for="count">Colors</label>
+        <input id="count" type="number" min="6" max="64" value="30" />
+      </div>
+      <div class="control">
+        <label for="format">Format</label>
+        <select id="format">
+          <option value="hex">HEX</option>
+          <option value="rgb">RGB</option>
+        </select>
+      </div>
+      <button id="generateBtn">Generate New Palette</button>
+      <p class="hint" id="hint">Tip: Click any color card to copy the code.</p>
+    </section>
+
+    <section class="gallery" id="gallery"></section>
+  </div>
+  <script src="script.js"></script>
+</body>
 </html>
