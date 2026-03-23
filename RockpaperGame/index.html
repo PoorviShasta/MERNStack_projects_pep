@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <div class="hero">
+      <div>
+        <p class="badge">Classic Challenge</p>
+        <h1>Rock Paper Scissors</h1>
+        <p class="sub">Choose quickly and beat the AI. First to 5 wins the round!</p>
+      </div>
+      <div class="scoreboard">
+        <div class="score-card player">
+          <p class="label">You</p>
+          <p class="value" id="player-score">0</p>
+        </div>
+        <div class="score-card computer">
+          <p class="label">Computer</p>
+          <p class="value" id="computer-score">0</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="choices" aria-label="Choose rock, paper or scissors">
+        <button class="choice" id="rock" data-choice="rock">✊<span>Rock</span></button>
+        <button class="choice" id="paper" data-choice="paper">✋<span>Paper</span></button>
+        <button class="choice" id="scissors" data-choice="scissors">✌️<span>Scissors</span></button>
+      </div>
+      <div class="results">
+        <p class="round-title">Round Result</p>
+        <p id="result" class="result-text">Make your move</p>
+        <p class="detail" id="detail">Computer will play as soon as you pick an option.</p>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="resetBtn">Reset Game</button>
+      <p class="hint">Best of 5: winner is first to 5 points.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
